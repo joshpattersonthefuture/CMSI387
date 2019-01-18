@@ -1,4 +1,5 @@
 //Authors: Joshua Patterson & Alex Richardson
+//Purpose: Implement a simple Hello World program
 #include <stdio.h>
 #include <stdlib.h>
 

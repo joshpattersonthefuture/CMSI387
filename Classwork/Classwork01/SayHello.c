@@ -7,8 +7,7 @@ int main( int argc, char * argv[] ) {
   printf("\n\n Enter a planet : \n\n");
   gets(str);
 
-  printf(" \n\n You said: Hello %s \n\n", str);
+  printf(" \n\n You said: Hello %s \n\n ", str);
   return(0);
 
 }
-

@@ -1,3 +1,4 @@
+//Authors: Joshua Patterson & Alex Richardson
 #include <stdio.h>
 #include <stdlib.h>
 

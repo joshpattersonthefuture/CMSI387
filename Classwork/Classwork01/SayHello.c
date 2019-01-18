@@ -1,5 +1,5 @@
-/* Author: Joshua Patterson *\
-/* Simple Hello, World Program in C *\
+// Author: Joshua Patterson 
+// Purpose: Simple Hello, World Program in C 
 
 #include <stdio.h>
 #include <stdlib.h>

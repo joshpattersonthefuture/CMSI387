@@ -5,6 +5,7 @@ int main()
     int age;
     char classYear[100];
     char from[100]; 
+    char gender[100]; 
 
     printf("What is your name : ");
     scanf("%s", name);
@@ -14,8 +15,10 @@ int main()
     scanf("%s", classYear);
     printf("Where are you from : ");
     scanf("%s", from);
+    printf("What is your gender : ");
+    scanf("%s", gender);
 
-    printf("Name: %s, Age:%d, Class Year: %s, From: %s \n", name, age, classYear, from);
+    printf("Your Info: \n\tName: %s \n\tAge:%d \n\tClass Year: %s \n\tFrom: %s \n\tGender: %s \n", name, age, classYear, from, gender);
 
     return 0;
 }

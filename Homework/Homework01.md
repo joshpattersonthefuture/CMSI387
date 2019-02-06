@@ -15,9 +15,19 @@ A process is a container for threads. When a user executes a task via some form 
 
 - Suppose the processor and disk work purely on thread A until its completion, and then the processor switches to thread B and runs all of that thread. What will the total elapsed time be?
 
+1 iteration = 10 ms Thread A disk I/O + 1 ms Thread A computation
+
+100 * (10 + 1 ms) + 1000 ms + 1ms = 2.101 sec
+
 - Suppose the processor starts out working on thread A, but every time thread A performs a disk operation, the processor switches to B during the operation and then back to A upon the disk operation's completion. What will the total elapsed time be?
 
+1 iteration = 10 ms Thread A disk I/O while 10 ms Thread B computation + 1 ms switch + 1 ms Thead A computation  + 1 ms switch
+
+100 * (10 ms + 1 ms + 1 ms + 1 ms) = 1.3 sec
+
 - In your opinion, which do you think is more efficient, and why?
+
+It is more efficient to work on Thread B while Thread A is doing disk I/O because the switch time is much less than the disk I/O time. Since a switch takes 1 ms and Thread A's disk I/O takes 10 ms, that's 8 ms that would be wasted doing nothing if you didn't switch the processor over.
 
 5. Find and read the documentation for pthread_cancel(). Then, using your C programming environment, use the information and the model provided in Figure 2.4 on page 26 of the text book to write a program in which the initial (main) thread creates a second thread. The main thread should read input from the keyboard, waiting until the user presses the Enter key. At that point, it should kill off the second thread and print out a message reporting that it has done so. Meanwhile, the second thread should be in an infinite loop, each time around sleeping five seconds and then printing out a message. Try running your program. Can the sleeping thread print its periodic messages while the main thread is waiting for keyboard input? Can the main thread read input, kill the sleeping thread, and print a message while the sleeping thread is in the early part of one of its five-second sleeps?
 

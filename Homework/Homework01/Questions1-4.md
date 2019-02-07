@@ -11,6 +11,8 @@ A process is a container for threads. When a user executes a task via some form 
 
 3. Of all the topics previewed in chapter one of the text book, which one are you most looking forward to learning more about? Why?
 
+Josh: I am looking forward to learning more about security for operating systems and middleware. Having a more broad view of system security would allow me to be more productive for a future in software development and website database building.
+
 4. Suppose thread A goes through a loop 100 times, each time performing one disk I/O operation, taking 10 milliseconds, and then some computation, taking 1 millisecond. While each 10-millisecond disk operation is in progress, thread A cannot make any use of the processor. Thread B runs for 1 second, purely in the processor, with no I/O. One millisecond of processor time is spent each time the processor switches threads; other than this switching cost, there is no problem with the processor working on thread B during one of thread A's I/O operations. (The processor and disk drive do not contend for memory access bandwidth, for example.)
 
 - Suppose the processor and disk work purely on thread A until its completion, and then the processor switches to thread B and runs all of that thread. What will the total elapsed time be?

@@ -1,0 +1,29 @@
+
+Evaluation for Homework 1
+CMSI 387 - Operating Systems
+============================
+
+Question 1: difference     -  1 point
+Question 2: relationship   -  1 point
+Question 3: topics         -  1 point
+Question 4a:               -  1 point
+Question 4b:               -  1 point
+Question 4c:               -  1 point
+Question 5 program:        -  1 point
+Question 5 print msg:      -  0.5 point [see below]
+Question 5 main kill:      -  1 point
+Question 6 shortest:       -  1 point
+Question 6 policy:         -  1 point
+Question 7 program         -  1 point
+
+Total possible points:     12 points
+           your score:     11.5 points
+       homework total:     11.5/12 = 95.83.00% which is an A
+
+Nice work!
+
+Your pthread program only prints its message once.  It is supposed
+to print it every 5 seconds, so there is a flaw in your logic of
+your program somewhere.  Pressing [ENTER] kills the threads properly,
+though.
+

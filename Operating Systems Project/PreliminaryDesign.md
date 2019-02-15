@@ -34,23 +34,19 @@ The current input format doesn't include an "am" or "pm" tag because it is not i
 # timedatectl set-time 3:58:30 pm
 ```
 
-Also, for the current set-time module, the format for setting the date only does not include hyphen nor apostrophes. While setting the time and date, hyphens and apostrophes are then added:
-
+Also, for the current set-time module, the format for only setting the date  does not include hyphen nor apostrophes. While setting the time and date, hyphens and apostrophes are then added:
 ```
 # timedatectl set-time 20151120
 ```
-
 ```
-#timedatectl set-time '2015-11-20 16:14:50'
+# timedatectl set-time '2015-11-20 16:14:50'
 ```
-
 We will modify this in several ways:
--to allow the input format
+-to allow the input format:
 ```
 # timedatectl set-time 1 JAN 2019 1:00:00 pm
 ```
--to elimate the need of apostrophes and always include hyphens in number-formatted dates
-
+-to elimate the need of apostrophes and always include hyphens in number-formatted dates:
 ```
 # timedatectl set-time 2019-1-1 1:00:00 pm
 ```
@@ -61,7 +57,6 @@ We will modify this in several ways:
 13 FEB 2019 4:06:00 pm
 ```
 - Shows the date in 12hr format
-
 ```
 # timedatectl set-time 24hr
 13 FEB 2019 16:06:00
@@ -70,9 +65,5 @@ We will modify this in several ways:
 ```
 # timedatectl set-time 2018-6-5 1:00:00 pm
 ```
-
-```
-#timedatectl set-time 2018-6-5 13:00:00
-```
-
 - Adding "am" or "pm" in the string allows the clock to change in reference to the 12 hour clock
+

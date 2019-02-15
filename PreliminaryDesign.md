@@ -17,7 +17,7 @@ We will also modify input formats of date and time by eliminating apostrophes an
   
 ### 1.2 – Rationale as to why this is a good idea, or what the good points of it are
 
-At first glance a 12 hour clock is easier to read for a majority of users. Linux should be able to accomodate for both forms rather than just a 24 hour clock. In addition to this, there should be an option for the user to choose which form is more comfortable for them.
+At first glance a 12 hour clock is easier to read for a majority of users. Linux should be able to accomodate for both forms rather than just a 24 hour clock. In addition to this, there should be an option for the user to choose which form is more comfortable for them. The user should be able to enter what time and date is proper without having the hassle of prompting help for syntax. Input formats for this module also vary if its just a time, just a date, or time and date. These variations revolve around hyphens and apostrophes, making the syntax for each command confusing. We want to have a static format with many options to increase the usability of this module.
 
 ### 1.3 – Preliminary list of [possible] Linux modules that will be modified/affected
 ```

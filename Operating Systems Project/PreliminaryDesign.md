@@ -34,7 +34,7 @@ The current input format doesn't include an "am" or "pm" tag because it is not i
 # timedatectl set-time 3:58:30 pm
 ```
 
-Also, for the current set-time module, the format for setting the date only does not include hyphen nor apostrophes. While setting the time and date, hyphens are then added:
+Also, for the current set-time module, the format for setting the date only does not include hyphen nor apostrophes. While setting the time and date, hyphens and apostrophes are then added:
 
 ```
 # timedatectl set-time 20151120

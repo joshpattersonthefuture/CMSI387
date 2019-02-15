@@ -68,7 +68,11 @@ We will modify this in several ways:
 ```
 - Shows the date in 24hr format without am or pm tag.
 ```
-$ timedatectl set-time 2018-6-5 1:00:00 pm
-8 JUN 2018 1:00:00 pm
+# timedatectl set-time 2018-6-5 1:00:00 pm
 ```
+
+```
+#timedatectl set-time 2018-6-5 13:00:00
+```
+
 - Adding "am" or "pm" in the string allows the clock to change in reference to the 12 hour clock

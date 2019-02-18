@@ -1,0 +1,14 @@
+JPatterson/Richardson
+
+CMSI 387 Operating Systems
+   Semester Project
+===================================
+
+This is an excellent idea which I've actually wanted to do
+for a long time, and played with at the scripting level.
+
+Having it be a kernel modification is a great way to get it
+implemented.
+
+Project approved.  Good work and good luck!
+

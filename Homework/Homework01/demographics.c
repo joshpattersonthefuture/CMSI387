@@ -1,3 +1,8 @@
+//Authors: Alex Richardson & Joshua Patterson
+//Date: February 6, 2019
+//Purpose: To write a program in C to prompt the user demographic information including name, age, class year, and any three other data times you wish.
+//Question # 7
+
 #include <stdio.h>
 int main()
 {

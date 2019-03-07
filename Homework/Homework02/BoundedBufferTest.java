@@ -1,19 +1,39 @@
 public class BoundedBufferTest {
     BoundedBuffer buff;
 
-    public void test_full_buffer() throws Exception {
+    public void test_full_buffer() {
         buff = new BoundedBuffer();
+        
         Thread t1 = new Thread();
-        buff.insert(t1);
+        try {
+            buff.insert(t1);
+        } catch (Exception e) {
+            System.out.println("Cannot insert thread to buffer");
+        }
         buff.print();
+
         Thread t2 = new Thread();
-        buff.insert(t2);
+        try {
+            buff.insert(t2);
+        } catch (Exception e) {
+            System.out.println("Cannot insert thread to buffer");
+        }
         buff.print();
+
         Thread t3 = new Thread();
-        buff.insert(t3);
+        try {
+            buff.insert(t3);
+        } catch (Exception e) {
+            System.out.println("Cannot insert thread to buffer");
+        }
         buff.print();
+
         Thread t4 = new Thread();
-        buff.insert(t4);
+        try {
+            buff.insert(t4);
+        } catch (Exception e) {
+            System.out.println("Cannot insert thread to buffer");
+        }
         buff.print();
     }
 

@@ -2,4 +2,4 @@
 #### By: Alex Richardson and Josh Patterson
 
 Problem 1
-- Reversing the order to unlock the spinlock then remove the thread is a bad idea because unlocking the spinlock marks it as available to next incoming thread. The next thread in line could move in before the current thread gets removed causing a malfunction.
+- Reversing the order to unlock the spinlock first then remove the thread is a bad idea because unlocking the spinlock marks it as available to next incoming thread. The next thread in line could move in before the current thread gets removed causing a malfunction.

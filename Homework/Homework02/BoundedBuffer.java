@@ -1,5 +1,6 @@
 public class BoundedBuffer {
-    private Object[] buffer = new Object[3]; // arbitrary size
+    private int SIZE = 3
+    private Object[] buffer = new Object[SIZE]; // arbitrary size
     private int numOccupied = 0;
     private int firstOccupied = 0;
 
@@ -14,8 +15,9 @@ public class BoundedBuffer {
             wait();
         buffer[(firstOccupied + numOccupied) % buffer.length] = o;
         numOccupied++;
-        // in case any retrieves are waiting for data, wake them
-        notifyAll();
+        if (numOccupied == 0) {
+            notifyAll();
+        }
     }
 
     public synchronized Object retrieve() throws InterruptedException {
@@ -27,7 +29,9 @@ public class BoundedBuffer {
         firstOccupied = (firstOccupied + 1) % buffer.length;
         numOccupied--;
         // in case any inserts are waiting for space, wake them
-        notifyAll();
+        if (numOccupied == SIZE) {
+            notifyAll();
+        }
         return retrieved;
     }
 

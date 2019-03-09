@@ -1,3 +1,5 @@
+//Joshua Patterson & Alex Richardson
+// #3 & 4
 public class BoundedBuffer {
     private int SIZE = 3;
     private Object[] buffer = new Object[SIZE]; // arbitrary size

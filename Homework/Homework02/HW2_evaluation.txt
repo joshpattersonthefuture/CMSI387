@@ -1,0 +1,62 @@
+
+
+CMSI 387 Operating Systems
+Results for Homework #2 Evaluation
+==================================
+
+Question 1 mutex reversing:          5/ 5 points
+Question 2 auditing code change:     5/ 5 points
+Question 3 test program:            20/20 points
+Question 4 notifyall() addition:    10/10 points
+Question 5a 2-phase locking:         5/ 5 points
+Question 5b short read locks:        5/ 5 points
+Question 5c snapshot isolation:      5/ 5 points
+Question 6 virtual address xlate:    5/ 5 points
+Question 7 calc. explanation:        5/ 5 points
+Question 8 loop 4096 analysis:      20/20 points
+Question 9 fork() tree:             10/15 points
+
+Total 75 out of 100 = 75.00% which is a C
+
+Comments:
+---------
+Problem 3, the BoundedBufferTest.java program does NOT compile,
+There are four errors as follows:
+
+[Yo Beej: Need Input] <== javac BoundedBufferTest.java
+BoundedBufferTest.java:9: error: cannot find symbol
+            buff.insert(t1);
+                ^
+  symbol:   method insert(Thread)
+  location: variable buff of type BoundedBuffer
+BoundedBufferTest.java:17: error: cannot find symbol
+            buff.insert(t2);
+                ^
+  symbol:   method insert(Thread)
+  location: variable buff of type BoundedBuffer
+BoundedBufferTest.java:25: error: cannot find symbol
+            buff.insert(t3);
+                ^
+  symbol:   method insert(Thread)
+  location: variable buff of type BoundedBuffer
+BoundedBufferTest.java:33: error: cannot find symbol
+            buff.insert(t4);
+                ^
+  symbol:   method insert(Thread)
+  location: variable buff of type BoundedBuffer
+4 errors
+
+
+You did write the addition of the "notifyAll()" method so I
+gave you credit for it, even though I couldn't test it.
+
+It would have been nice to include the code for problem #8, which
+was supposed to be written in "C", BTW, but as it wasn't specifically
+stated, I'll accept the Java solution.  Interesting time results, do
+you think?
+
+I had to take 5 points off on problem #9.  The fork() tree will have
+a different configuration than your diagram.  If you have questions
+I'll be happy to show you what I mean.
+
+Not bad...

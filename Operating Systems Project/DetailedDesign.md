@@ -68,4 +68,4 @@ The command that needs to be modified alters the way in which the user sets the 
 | Modified Commands | Example     | Format       | Function
 | ----------------  |:------------|:------------:|:------------:|
 | `set-time`       | `# timedatectl set-time 01 JAN 2019 1:00:00 pm`| `# timedatectl set-time dd MMM yyyy hh:mm:ss pm/am` | sets the date/time in accordance to a 12hr clock
-| `set-time`        | `# timedatectl set-time 12hr` | `# timedatectl set-time XXhr` | sets the default clock for the system to 12hr/24hr as specified
+| `set-time`        | `# timedatectl set-time 12hr` | `# timedatectl set-time XXhr` | sets the default clock format for the system to 12hr/24hr as specified

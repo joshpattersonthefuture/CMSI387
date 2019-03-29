@@ -56,11 +56,15 @@ Outputs for setting the time will be the following:
 ### 2.3 – Class diagram showing affected modules [and any new modules] and how they related to one another
 ### 2.4 – List or table of explanations of all command line options that will be implemented
 
-| New Options        | Function        
-| ------------- |:-------------:|
-| --12hr | shows time output in 12hr format
-| --24hr | shows time output in 24hr format
+| New Options   | Example   | Function        
+| ------------- |:----------|:-------------:|
+| `--12hr` | `# timedatectl --12hr` | shows time output in 12hr format
+| `--24hr` | `# timedatectl --24hr` | shows time output in 24hr format
 
-| Modified Commands | Format       | Function
-| ----------------  |:------------:|:------------:|
-| set-time       | set-time dd MMM yyyy hh:mm:ss pm/am | sets the date and time in accordance to a 12hr clock
+#### Explanation
+
+This allows the user to quickly view the time in either 12hr or 24hr format. 
+
+| Modified Commands | Example     | Format       | Function
+| ----------------  |:------------|:------------:|:------------:|
+| `set-time`       | `# timedatectl set-time 01 JAN 2019 1:00:00 pm`| `# timedatectl set-time dd MMM yyyy hh:mm:ss pm/am` | sets the date/time in accordance to a 12hr clock

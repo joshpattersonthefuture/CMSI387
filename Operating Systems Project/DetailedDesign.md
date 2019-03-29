@@ -63,7 +63,7 @@ New options for both 12 and 24 hours allows the user to quickly view the time in
 | `--12hr` | `# timedatectl --12hr` | shows time output in 12hr format
 | `--24hr` | `# timedatectl --24hr` | shows time output in 24hr format
 
-The command that needs to be modified alters the way in which the user sets the time and date of the operating system. The command allows for the user to adjust the time quicker since the user is likely referencing a clock with 12hr time in making the adjustment to the operating system. We also changed the way the month is inputted from a digit format `03` to an abbreviated version of the month's name in English `MAR`. We made that decision when we noticed a discrepancy in the way the console outputted date/time vs. the way you inputted a new date/time. The console outputted a 3 letter abbreviation whereas the `timedatectl` required a 2 digit version of the month.
+The command that needs to be modified alters the way in which the user sets the time and date of the operating system. The command allows for the user to adjust the time quicker since the user is likely referencing a clock with 12hr time in making the adjustment to the operating system. We also changed the way the month is inputted from a digit format `03` to an abbreviated version of the month's name in English `MAR`. We made that decision when we noticed a discrepancy in the way the console outputted date/time vs. the way the user inputted a new date/time. The console outputted a 3 letter abbreviation whereas the `timedatectl` required a 2 digit version of the month.
 
 | Modified Commands | Example     | Format       | Function
 | ----------------  |:------------|:------------:|:------------:|

@@ -56,6 +56,11 @@ Outputs for setting the time will be the following:
 ### 2.3 – Class diagram showing affected modules [and any new modules] and how they related to one another
 ### 2.4 – List or table of explanations of all command line options that will be implemented
 
-| Option        | Explanation        
+| New Options        | Function        
 | ------------- |:-------------:|
-| --no-ask-password | Do not query the user for authentication for privileged operations.
+| --12hr | shows time output in 12hr format
+| --24hr | shows time output in 24hr format
+
+| Modified Commands | Format       | Function
+| ----------------  |:------------:|:------------:|
+| set-time       | set-time dd MMM yyyy hh:mm:ss pm/am | sets the date and time in accordance to a 12hr clock

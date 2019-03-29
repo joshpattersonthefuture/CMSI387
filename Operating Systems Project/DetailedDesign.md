@@ -56,14 +56,13 @@ Outputs for setting the time will be the following:
 ### 2.3 – Class diagram showing affected modules [and any new modules] and how they related to one another
 ### 2.4 – List or table of explanations of all command line options that will be implemented
 
+New options for both 12 and 24 hours allows the user to quickly view the time in either 12hr or 24hr format. The user by default is shown the time in 24hr format, making `--12hr` the only useful option. If the user changes their default to 12hr format then `24hr` becomes the way to quickly see the time in 24hr format.
+
 | New Options   | Example   | Function        
 | ------------- |:----------|:-------------:|
 | `--12hr` | `# timedatectl --12hr` | shows time output in 12hr format
 | `--24hr` | `# timedatectl --24hr` | shows time output in 24hr format
 
-#### Explanation
-
-This allows the user to quickly view the time in either 12hr or 24hr format. 
 
 | Modified Commands | Example     | Format       | Function
 | ----------------  |:------------|:------------:|:------------:|

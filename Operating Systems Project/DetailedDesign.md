@@ -56,13 +56,14 @@ Outputs for setting the time will be the following:
 ### 2.3 – Class diagram showing affected modules [and any new modules] and how they related to one another
 ### 2.4 – List or table of explanations of all command line options that will be implemented
 
-New options for both 12 and 24 hours allows the user to quickly view the time in either 12hr or 24hr format. The user by default is shown the time in 24hr format, making `--12hr` the only useful option. If the user changes their default to 12hr format then `24hr` becomes the way to quickly see the time in 24hr format.
+New options for both 12 and 24 hours allows the user to quickly view the time in either 12hr or 24hr format. The user by default is shown the time in 24hr format, making `--12hr` the only useful option. If the user changes their default to 12hr format then `--24hr` becomes the way to quickly see the time in 24hr format.
 
 | New Options   | Example   | Function        
 | ------------- |:----------|:-------------:|
 | `--12hr` | `# timedatectl --12hr` | shows time output in 12hr format
 | `--24hr` | `# timedatectl --24hr` | shows time output in 24hr format
 
+The command that needs to be modified alters the way in which the user sets the time and date of the operating system. The command allows for the user to adjust the time quicker since the user is likely referencing a clock with 12hr time in making the adjustment to the operating system. We also changed the way the month is inputted from a digit format `03` to an abbreviated version of the month's name in English `MAR`. We made that decision when we noticed a discrepancy in the way the console outputted date/time vs. the way you inputted a new date/time. The console outputted a 3 letter abbreviation whereas the `timedatectl` required a 2 digit version of the month.
 
 | Modified Commands | Example     | Format       | Function
 | ----------------  |:------------|:------------:|:------------:|

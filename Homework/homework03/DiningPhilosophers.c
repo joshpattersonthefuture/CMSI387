@@ -19,12 +19,12 @@ void drop(int);
 
 void think(int seat) {
 	printf("Philosopher %d thinks...\n", seat);
-	sleep(3);
+	sleep(5);
 }
 
 void eat(int seat) {
 	printf("Philosopher %d eats \n", seat);
-	sleep(3);
+	sleep(5);
 }
 void grab(int seat) {
 	int forkRight = (seat + 1) % Philo;
@@ -65,9 +65,6 @@ void *philosopher(void *seat) {
 
 int main() {
 		int k;
-		for (k = 0; k < Philo; ++k) {
-			pthread_attr_init(&tattr[k]);
-		}
 		for (k = 0; k < Philo; ++k) {
 			pthread_mutex_init(&forks[k], 0);
 		}

@@ -1,11 +1,9 @@
 //Authors: Joshua Patterson & Alex Richardson
 //Date: Apr 5, 2019
 //Purpose: To solve the Dining Philosophers problem with deadlock avoidance
+#include <stdio.h>
 #include <time.h>
 #include <pthread.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
 
 #define Philo 5   //5 philosophers number 0-4
 pthread_t philosophers[Philo];
@@ -19,7 +17,7 @@ void drop(int);
 
 void think(int seat) {
 	printf("Philosopher %d thinks...\n", seat);
-	sleep(5);
+  sleep(5);
 }
 
 void eat(int seat) {
@@ -49,9 +47,10 @@ void grab(int seat) {
 
 
 void drop(int seat) {
+  int seats= seat+1;
 	printf("Philosopher %d dropped their fork \n", seat);
-	pthread_mutex_unlock(&forks[(seat + Philo) % Philo]);
-	pthread_mutex_unlock(&forks[(seat + 1) % Philo]);
+	pthread_mutex_unlock(&forks[(Philo + seat) % Philo]);
+	pthread_mutex_unlock(&forks[(seats) % Philo]);
 }
 
 void *philosopher(void *seat) {
@@ -64,15 +63,15 @@ void *philosopher(void *seat) {
 }
 
 int main() {
-		int k;
-		for (k = 0; k < Philo; ++k) {
-			pthread_mutex_init(&forks[k], 0);
-		}
-		for (k = 0; k < Philo; ++k) {
-			pthread_create(&philosophers[k], &tattr[k], philosopher, (void *)(k));
-		}
-		for (k = 0; k < Philo; ++k) {
-			pthread_join(philosophers[k], 0);
-		}
-		return 0;
+	int k;
+	for (k = 0; k < Philo; ++k) {
+		pthread_mutex_init(&forks[k], 0);
 	}
+	for (k = 0; k < Philo; ++k) {
+		pthread_create(&philosophers[k], &tattr[k], philosopher, (void *)(k));
+	}
+	for (k = 0; k < Philo; ++k) {
+		pthread_join(philosophers[k], 0);
+	}
+	return 0;
+}

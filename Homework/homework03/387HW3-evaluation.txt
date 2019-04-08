@@ -1,0 +1,41 @@
+
+Evaluation for Homework 3
+CMSI 387 - Operating Systems
+============================
+
+Question 1: dining philosophers program:   10.00 points out of 20 possible
+Question 2: why immune explanation     :   10.00 points out of 10 possible
+Question 3: file processing "C" program:   10.00 points out of 20 possible
+Question 4: mmap program "C" program   :   00.00 points out of 20 possible
+Question 5: appropriate class explained:   10.00 points out of 10 possible
+
+Total possible points:     80.00 points
+           your score:     40.00 points
+       homework total:     40.00/80.00 = 50.00% which is not so good....
+
+Comments:
+---------
+I got seven warning messages when I compiled your DiningPhilosophers.c
+program, then when I ran it I got no output.  You wrote a lot of code, so
+I'm giving you partial credit.  If you can get it working ASAP and commit
+a new version, I'll re-evaluate it.  Using different forks is very helpful,
+but you can also consider having them hold the forks for random times.
+
+For #3 there are two difficulties.  First, your file name won't compile on
+a UNIX O/S because of the "#" in the name.  I copied it to a new name,
+"prob3copy.c" so it would compile.  The second problem is that you didn't
+close the STDOUT_FILENO file descriptor and re-open it with the file name
+of "/etc/passwd" as was required.  Hence, running the program produces no
+output, it just sits there.
+
+There is no code for #4 at all.
+
+Semester so far:
+
+   homework01 @ 10%:   95.83% =  9.58 points
+   homework02 @ 10%:   75.00% =  7.50 points
+   homework03 @ 10%:   50.00% =  5.00 points
+   particip.  @ 10%:  100.00% = 10.00 points
+   proj pt. 1 @ 20%:  100.00% = 20.00 points
+
+       total points:  52.08 out of 60.00 = 86.80% which is a B

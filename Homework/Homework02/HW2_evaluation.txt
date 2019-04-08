@@ -6,7 +6,7 @@ Results for Homework #2 Evaluation
 
 Question 1 mutex reversing:          5/ 5 points
 Question 2 auditing code change:     5/ 5 points
-Question 3 test program:            20/20 points
+Question 3 test program:             0/20 points
 Question 4 notifyall() addition:    10/10 points
 Question 5a 2-phase locking:         5/ 5 points
 Question 5b short read locks:        5/ 5 points

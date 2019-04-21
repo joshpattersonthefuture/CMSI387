@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <pthread.h>
+#include <unistd.h>
 
 #define Philo 5   //5 philosophers number 0-4
 pthread_t philosophers[Philo];
@@ -53,7 +54,7 @@ void drop(int seat) {
 	pthread_mutex_unlock(&forks[(seats) % Philo]);
 }
 
-void *philosopher(void *seat) {
+void *philosopherSeat(int seat) {
 	while (1) {
 		think(seat);
 		grab(seat);
@@ -68,7 +69,7 @@ int main() {
 		pthread_mutex_init(&forks[k], 0);
 	}
 	for (k = 0; k < Philo; ++k) {
-		pthread_create(&philosophers[k], &tattr[k], philosopher, (void *)(k));
+		pthread_create(&philosophers[k], &tattr[k], *philosopherSeat, (void *)(k));
 	}
 	for (k = 0; k < Philo; ++k) {
 		pthread_join(philosophers[k], 0);

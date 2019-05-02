@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
         strftime ( buff, sizeof buff, "%A, %x %H:%M:%S", tm_now ); //24
         printf ( "%s\n", buff );
       }
+    } else {
+      printf("Enter either 12hr or 24hr for your desired format")
     }
+
   return 0;
 }

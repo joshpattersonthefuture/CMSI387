@@ -16,14 +16,12 @@ int main(int argc, char *argv[])
         strftime ( buff, sizeof buff, "%A, %x %I:%M:%S %p", tm_now ); //12
         printf ( "%s\n", buff );
       }
-      if (!strncmp(argv[1], "24hr", 4)) {
-        strftime ( buff, sizeof buff, "%A, %x %H:%M:%S", tm_now ); //24
-        printf ( "%s\n", buff );
-      } else {
-          printf("Enter either 12hr or 24hr for your desired format \n");
-      }
-      } else {
-      printf("Enter either 12hr or 24hr for your desired format \n");
+        else if (!strncmp(argv[1], "24hr", 4)) {
+          strftime ( buff, sizeof buff, "%A, %x %H:%M:%S", tm_now ); //24
+          printf ( "%s\n", buff );
+        } else {
+            printf("Enter either 12hr or 24hr for your desired format \n");
+        }
       }
   return 0;
 }

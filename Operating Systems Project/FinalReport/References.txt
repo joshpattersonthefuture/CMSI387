@@ -1,0 +1,5 @@
+Procps - The /proc file system utilities: http://procps.sourceforge.net/index.html
+LXR: http://lxr.linux.no/#linux+v4.15.14/kernel/sched.c#L3566.
+Homework 3 - Description: http://forns.lmu.build/classes/spring-2018/cmsi-387/homework/hw3/homework-3.html
+Adding a Hello World System Call to Linux Kernel: https://medium.com/anubhav-shrimal/adding-a-hello-world-system-call-to-linux-kernel-dad32875872
+The Debian Administrator's Handbook: https://debian-handbook.info/browse/stable/unix-services.html
